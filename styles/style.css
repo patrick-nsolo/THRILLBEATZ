@@ -3,8 +3,7 @@
   margin:0;
   padding:0;
   box-sizing: border-box;
-  font-family: 'inter', sans-serif;
-
+  font-family: montserrat;
 }
 img{
   max-inline-size: 100%;
@@ -16,7 +15,7 @@ body{
   padding: 0;
   height: 100%;
   overflow-x: hidden;
-  background-color: black;
+  background-color: var(--black);
 }
 :root{
   --red:rgb(255, 0, 0);
@@ -32,4 +31,9 @@ body{
   --grey:hsl(0, 0%, 94%);
   --darkgrey:hsl(0, 0%, 24%);
   --top-row-right:60px;
+}
+#beats{
+  position: relative;
+  width: 200px;
+  height:200px;
 }
