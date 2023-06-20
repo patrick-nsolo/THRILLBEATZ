@@ -22,6 +22,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    position: absolute;
 }
 .menu{
     display: flex;
@@ -90,4 +91,14 @@
     .menu.active{
         left:0;
     }    
+}
+
+
+.slider{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+.slider{
+    position:
 }
