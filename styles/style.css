@@ -38,22 +38,36 @@ body{
   height:500px;
 }
 .headphones-circle{
-  position:relative;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
-.red-circle{
+/*.red-circle{
   position:absolute;
-  top: -50%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--red);
   width: 500px;
   height: 500px;
   border-radius: 50%;
-}
+  
+}*/
 .headphones{
   position:absolute;
-  top: 50%;
-  left: 50%;
+  top: 0%;
+  left: 10%;
   transform: translate (-50%, -50%) rotate(0deg);
   transition: transform 1s linear;
+}
+.headphones img{
+  display: block;
+  width: 500px;
+  height:500px;
+}
+.speed-up {
+  animation-duration: 0.5s;
+}
+.slow-down {
+  animation-duration: 2s;
 }

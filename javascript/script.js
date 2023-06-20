@@ -5,80 +5,66 @@ const interval = setInterval(function() {
   image.height = width * 1.1;
 }, 6000);
 
+const beats = document.querySelector('beats');
+const headphones = document.querySelector('.headphones');
 
+let rotationSpeed = 0;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const glowElements = document.querySelectorAll('.glow');
-
-glowElements.forEach((element) => {
-  element.addEventListener('mousemove', handleMouseMove);
-});
-
-function handleMouseMove(event) {
-  const glowElement = event.target;
-  const glowWidth = glowElement.offsetWidth;
-  const glowPosition = event.offsetX;
-  const glowPercentage = (glowPosition / glowWidth) * 100;
-  glowElement.style.setProperty('--glow-progress', `${glowPercentage}%`);
+function updateRotation() {
+  headphones.style.transform = `translate(-50%, -50%) rotate(${rotationSpeed}deg)`;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function onHover(element) {
-    element.querySelector('span').classList.add('active');
+swag.addEventListener('click', () => {
+  if (rotationSpeed === 0) {
+    rotationSpeed = 10;
+    headphones.classList.add('speed-up');
+    headphones.classList.remove('slow-down');
+  } else {
+    rotationSpeed = 0;
+    headphones.classList.remove('speed-up');
+    headphones.classList.remove('slow-down');
   }
-  function onLeave(element) {
-    element.querySelector('span').classList.remove('active');
+  updateRotation();
+});
+
+headphones.addEventListener('click', (event) => {
+  event.stopPropagation();
+  if (rotationSpeed === 0) {
+    rotationSpeed = -5;
+    headphones.classList.remove('speed-up');
+    headphones.classList.add('slow-down');
+  } else {
+    rotationSpeed = 0;
+    headphones.classList.remove('speed-up');
+    headphones.classList.remove('slow-down');
   }
-  document.querySelectorAll('nav li a').forEach(function(element) {
-    element.addEventListener('mouseover', onHover);
-    element.addEventListener('mouseout', onLeave);
-  });
+  updateRotation();
+});
+
+updateRotation();
 
 
 
-var images = document.querySelectorAll('img');
-var activeImage = images[0];
-setInterval(function() {
-    activeImage.classList.remove('active');
-    activeImage = images[images.indexOf(activeImage) + 1];
-    activeImage.classList.add('active');
-  }, 10000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
