@@ -1,0 +1,16 @@
+.navbar{
+    display:flex;
+}
+.menu{
+    display:flex;
+    justify-content: space-between;
+    gap:50px;
+}
+.menu li{
+    list-style: none;
+}
+.bar{
+    height:2px;
+    background: black;
+    width: 5px;
+}
