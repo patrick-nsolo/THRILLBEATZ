@@ -1,3 +1,37 @@
+const image = document.querySelector('img');
+const interval = setInterval(function() {
+  var width = image.width;
+  image.width = width * 1.1;
+  image.height = width * 1.1;
+}, 6000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const glowElements = document.querySelectorAll('.glow');
 
 glowElements.forEach((element) => {
