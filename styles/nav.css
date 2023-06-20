@@ -1,9 +1,3 @@
-body{
-    margin: 0;
-    padding: 0;
-    background-color: black;
-    
-}
 img {
     top: 0;
     left: 0;
@@ -13,7 +7,6 @@ img {
 }
 footer{
     text-align: center;
-    
     bottom: 0;
     color: #cfcfcf;
 }
