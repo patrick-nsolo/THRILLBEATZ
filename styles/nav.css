@@ -1,8 +1,10 @@
+
 .logo{
     font-size: 1.5rem;
     text-decoration: none;
     color: #cfcfcf;
     font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .nav-item{
     list-style: none;
@@ -19,6 +21,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
 }
 .menu{
     display: flex;
@@ -29,6 +32,8 @@
 .nav-item a{
     transition:0.5s ease-out;
     color:#cfcfcf;
+    font-size: 1.2rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .nav-item a:hover{
     color:rgb(255, 0, 0);
